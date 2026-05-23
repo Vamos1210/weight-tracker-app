@@ -13,18 +13,21 @@
 
 ## UI
 
-### PC版
+## UI
 
-<p align="center">
-  <img src="./docs/images/pc-ui.png" width="900" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <b>PC版</b><br /><br />
+      <img src="./docs/images/pc-ui.png" height="500" />
+    </td>
 
-### スマホ版
-
-<p align="center">
-  <img src="./docs/images/mobile-ui.png" width="320" />
-</p>
-
+    <td align="center">
+      <b>スマホ版</b><br /><br />
+      <img src="./docs/images/mobile-ui.png" height="500" />
+    </td>
+  </tr>
+</table>
 ---
 
 # 使用技術

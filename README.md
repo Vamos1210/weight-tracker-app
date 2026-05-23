@@ -15,11 +15,15 @@
 
 ### PC版
 
-![PC版UI](./docs/images/desktop-ui.png)
+<p align="center">
+  <img src="./docs/images/pc-ui.png" width="900" />
+</p>
 
 ### スマホ版
 
-![スマホ版UI](./docs/images/mobile-ui.png)
+<p align="center">
+  <img src="./docs/images/mobile-ui.png" width="320" />
+</p>
 
 ---
 

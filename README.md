@@ -12,22 +12,26 @@
 - 小数点入力不要な体重入力UX
 
 
+## UI
+
 <table>
   <tr>
     <td align="center">
-      <b>PC版</b><br /><br />
-      <img src="./docs/images/pc-ui.png" height="500" />
+      <b>PC版</b>
     </td>
-
-    <td width="40"></td>
-
     <td align="center">
-      <b>スマホ版</b><br /><br />
+      <b>スマホ版</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/images/desktop-ui.png" height="500" />
+    </td>
+    <td align="center">
       <img src="./docs/images/mobile-ui.png" height="500" />
     </td>
   </tr>
 </table>
-
 
 # 使用技術
 

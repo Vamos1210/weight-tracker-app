@@ -12,8 +12,6 @@
 - 小数点入力不要な体重入力UX
 
 
-## UI
-
 <table>
   <tr>
     <td align="center">

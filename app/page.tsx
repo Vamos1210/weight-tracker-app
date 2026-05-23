@@ -10,7 +10,7 @@
  * ・PCでは横長ダッシュボード表示を維持
  */
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   LineChart,
@@ -73,6 +73,14 @@ export default function Home() {
    * 今日の日付です。
    */
   const todayText = formatDate(new Date());
+  
+  /**
+  * 今日の日付ボタンを参照するためのものです。
+  * 初回表示時に、このボタンが中央に来るようスクロールします。
+  */
+  const todayButtonRef = useRef<HTMLButtonElement | null>(null);
+  
+  const dateSliderRef = useRef<HTMLDivElement | null>(null);
 
   /**
    * 現在選択されている日付です。
@@ -157,6 +165,24 @@ export default function Home() {
       alert("保存に失敗しました");
     }
   };
+
+
+  /**
+ * 初回表示時に、日付スライダーの「今日」を中央へスクロールします。
+ */
+  useEffect(() => {
+    const slider = dateSliderRef.current;
+    const todayButton = todayButtonRef.current;
+  
+    if (!slider || !todayButton) return;
+  
+    requestAnimationFrame(() => {
+      const sliderCenter = slider.clientWidth / 2;
+      const buttonCenter = todayButton.offsetLeft + todayButton.offsetWidth / 2;
+  
+      slider.scrollLeft = buttonCenter - sliderCenter;
+    });
+  }, []);
 
   /**
    * 初回表示時にGAS APIからスプレッドシートのデータを取得します。
@@ -308,7 +334,10 @@ export default function Home() {
               </label>
 
               <div className="w-full overflow-hidden">
-                <div className="flex max-w-full gap-2 overflow-x-auto pb-1">
+              <div
+                ref={dateSliderRef}
+                className="flex max-w-full gap-2 overflow-x-auto pb-1"
+              >
                   {dates.map((date) => {
                     const dateText = formatDate(date);
                     const isSelected = selectedDate === dateText;
@@ -317,6 +346,7 @@ export default function Home() {
                     return (
                       <button
                         key={dateText}
+                        ref={isToday ? todayButtonRef : null}
                         onClick={() => setSelectedDate(dateText)}
                         className={`shrink-0 rounded-xl border px-3 py-1.5 text-xs font-bold transition lg:rounded-2xl lg:py-2 lg:text-sm ${
                           isSelected

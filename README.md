@@ -13,8 +13,6 @@
 
 ## UI
 
-## UI
-
 <table>
   <tr>
     <td align="center">
@@ -22,12 +20,15 @@
       <img src="./docs/images/pc-ui.png" height="500" />
     </td>
 
+    <td width="40"></td>
+
     <td align="center">
       <b>スマホ版</b><br /><br />
       <img src="./docs/images/mobile-ui.png" height="500" />
     </td>
   </tr>
 </table>
+
 ---
 
 # 使用技術

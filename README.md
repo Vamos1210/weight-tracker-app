@@ -11,6 +11,16 @@
 - 日次の体重推移グラフ表示
 - 小数点入力不要な体重入力UX
 
+## UI
+
+### PC版
+
+![PC版UI](./docs/images/desktop-ui.png)
+
+### スマホ版
+
+![スマホ版UI](./docs/images/mobile-ui.png)
+
 ---
 
 # 使用技術
